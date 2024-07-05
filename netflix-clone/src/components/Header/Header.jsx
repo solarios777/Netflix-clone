@@ -46,9 +46,9 @@ const Header = () => {
           <div className="user-profile">
             <a href="#" className="account-box-icon">
               <AccountBoxIcon />
-              <a href="#" className="account-box-icon">
-                <KeyboardArrowDownIcon />
-              </a>
+            </a>
+            <a href="#" className="account-box-icon">
+              <KeyboardArrowDownIcon />
             </a>
           </div>
         </div>
