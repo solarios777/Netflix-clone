@@ -37,6 +37,11 @@ nav {
   padding: 0;
 }
 
+@media (max-width:768px){
+  .nav-left li{
+    display: none;
+  }
+}
 .nav-left li a {
   color: #fff;
   text-decoration: none;
