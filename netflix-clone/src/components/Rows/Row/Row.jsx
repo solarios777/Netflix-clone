@@ -82,16 +82,17 @@ const Row = ({ title, fetchUrl ,islargeRow}) => {
             key={index}
             src={`${baseUrl}${
               islargeRow ? movie.poster_path : movie.backdrop_path
-              }`}
+            }`}
             alt={movie.name}
-            className={`row_poster ${islargeRow&& "row_posterlarge"}`}
+            className={`row_poster ${islargeRow && "row_posterlarge"}`}
           />
         ))}
       </div>
-      <div style={{ padding: '40px ' }}>
-        {TrailerUrl && <Youtube videoId={ TrailerUrl} opts={opts} />}
-
-      </div>
+      {TrailerUrl && (
+        <div style={{ padding: "40px " }}>
+          <Youtube videoId={TrailerUrl} opts={opts} />
+        </div>
+      )}
     </div>
   );
 
