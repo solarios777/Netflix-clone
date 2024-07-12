@@ -28,9 +28,11 @@ const Banner = () => {
 
   return (
     <div
-      className="banner"
+      className="banner1"
       style={{
         backgroundSize: "cover",
+        position: "relative",
+        zIndex: -1,
         backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -46,11 +48,14 @@ const Banner = () => {
             {truncate(movie?.overview, 150)}
           </h2>
           <div className="banner__buttons">
-            <button className="banner__button">Play</button>
+            <button className="banner__button play">Play</button>
             <button className="banner__button">My List</button>
           </div>
         </div>
-        <div className="bannerfadeBottom " />
+        <div
+          className="bannerfadeBottom"
+          style={{ position: "relative", zIndex: -1 }}
+        />
       </div>
     </div>
   );
