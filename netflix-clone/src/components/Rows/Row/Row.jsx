@@ -4,23 +4,21 @@ import axios from "../../../utilis/axioss"
 import "./Row.css"
 import movietrailer from "movie-trailer"
 import Youtube from "react-youtube"
-// import { width } from '@mui/system';
+
 
 
 const Row = ({ title, fetchUrl ,islargeRow}) => {
-  // const [selectedMovie, setSelectedMovie] = useState(null);
+ 
   const [movies, setMovies] = useState([]);
-  // const [isFetching, setIsFetching] = useState(false);
-  // const [isSliderActive, setIsSliderActive] = useState(false);
-  // const [sliderPosition, setSliderPosition] = useState(0);
+
   const [TrailerUrl, setTrailerUrl] = useState("")
   
   const baseUrl = "https://image.tmdb.org/t/p/w300";
 
   useEffect(() => {
-    // const fetchData =
+    
       (async () => {
-      // setIsFetching(true);
+      
       try {
         
         const response = await axios.get(fetchUrl); 
@@ -30,9 +28,9 @@ const Row = ({ title, fetchUrl ,islargeRow}) => {
         console.error("Error fetching movies:", error);
       }
       
-      // setIsFetching(false);
+      
     })
-    // fetchData
+    
       ();
   }, [fetchUrl]);
 
@@ -49,20 +47,7 @@ const Row = ({ title, fetchUrl ,islargeRow}) => {
     }
   }
 
-  // const handleSliderScroll = (direction) => {
-  //   setIsSliderActive(true);
-  //   if (direction === "left") {
-  //     setSliderPosition(Math.max(sliderPosition - 250, 0));
-  //   } else {
-  //     setSliderPosition(
-  //       Math.min(sliderPosition + 250, movies.length * 150 - window.innerWidth)
-  //     );
-  //   }
-  // };
-
-  // const handleSliderEnd = () => {
-  //   setIsSliderActive(false);
-  // };
+  
 
   const opts = {
     height: "390",
